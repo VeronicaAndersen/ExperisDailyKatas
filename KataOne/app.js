@@ -17,8 +17,7 @@ document.getElementById("points").innerHTML = "Total points: " + finalPoints;
 
 
 
-/*__________________________FizzBuzz__________________________*/
-
+/*__________________________Splitword__________________________*/
 
 function splitOnDoubleLetter(word) {
   let previousLetter = word[0];
@@ -50,4 +49,3 @@ function splitOnDoubleLetter(word) {
 
 console.log(splitOnDoubleLetter("happy"));
 console.log(splitOnDoubleLetter("easy"));
-
