@@ -19,33 +19,51 @@ document.getElementById("points").innerHTML = "Total points: " + finalPoints;
 
 /*__________________________Splitword__________________________*/
 
+
+
+// splitOnDoubleLetter(‘Letter’) -> [‘let’, ‘ter’]
+
+// splitOnDoubleLetter(‘Really’) -> [‘real’, ‘ly’]
+
+// splitOnDoubleLetter(‘Happy’) -> [‘hap’, ‘py’]
+
+// splitOnDoubleLetter(‘Shall’) -> [‘shal’, ‘l’]
+
+// splitOnDoubleLetter(‘Tool’) -> [‘to’, ‘ol’]
+
+// splitOnDoubleLetter(‘Mississippi’) -> [‘Mis’, ‘sis’, ‘sip’, ‘pi’]
+
+// splitOnDoubleLetter(‘Easy) returns []
+
 function splitOnDoubleLetter(word) {
   let previousLetter = word[0];
-  let placeHolder = 0;
-  let result = [];
+  let placeHolder = 0; 
   let splitWord = "";
+  let result = [];
   let matchFound = false;
 
-  for (let i = 1; i < word.length; i++) {
-    // previousLetter = word[i];
-
-    if (previousLetter == word[i]) {
+  for (let i = 0; i < word.length; i++) {
+    if(previousLetter == word[i]){
       splitWord = word.substring(placeHolder, i);
-      result.push(splitWord)
+      result.push(splitWord);
       placeHolder = i;
       matchFound = true;
     }
-
-    result.push(word.substring(placeHolder, word.length))
-    // previousLetter = word[i];
-
-    if (matchFound == true) {
-      result.push(word.substring(placeHolder, word.length));
-      word.substring();
-    }
+    previousLetter = word[i];
   }
+
+  if (matchFound == true) {
+    result.push(word.substring(placeHolder, word.length));
+    word.substring();
+  }
+
   return result;
 }
 
-console.log(splitOnDoubleLetter("happy"));
-console.log(splitOnDoubleLetter("easy"));
+console.log(splitOnDoubleLetter("Letter"));
+console.log(splitOnDoubleLetter("Really"));
+console.log(splitOnDoubleLetter("Happy"));
+console.log(splitOnDoubleLetter("Shall"));
+console.log(splitOnDoubleLetter("Tool"));
+console.log(splitOnDoubleLetter("Mississippi"));
+console.log(splitOnDoubleLetter("Easy"));
