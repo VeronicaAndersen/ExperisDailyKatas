@@ -11,11 +11,12 @@
 // getLength([1, [2], 1, [2], 1]) ➞ 5
 // An empty array should return 0.
 
-let array = [1, [2, 3]];
-array = [1, [2, [3, 4]]];
-array = [1, [2, [3, [4, [5, 6]]]]];
-array = [1, [2], 1, [2], 1];
-// array = [];
+let arrayOne = [1, [2, 3]];
+let arrayTwo = [1, [2, [3, 4]]];
+let arrayThree = [1, [2, [3, [4, [5, 6]]]]];
+let arrayFour = [1, [2], 1, [2], 1];
+let arrayFive = ["[2,3]",[[7, 1, [3, 5]]]];
+let arraySix = [];
 
 function countArray(array) {
     let counter = 0;
@@ -29,4 +30,9 @@ function countArray(array) {
     }
     return counter;
 }
-console.log(countArray(array));
+console.log(countArray(arrayOne));
+console.log(countArray(arrayTwo));
+console.log(countArray(arrayThree));
+console.log(countArray(arrayFour));
+console.log(countArray(arrayFive));
+console.log(countArray(arraySix));
