@@ -1,15 +1,12 @@
 
-let array = [9, 5, 9, 5, 1, 1, 1] // ➞ 2
-array = [5, 6, 6, 7, 6, 3, 9] // ➞ 1
-array = [4, 4, 4, 9, 9, 9, 9] // ➞ 0
-array = [1, 7, 1, 7, 1, 7, 1] // ➞ 5
-let total = 0;
-function checkNumberOfBomerangs() {
-    
 
-    for (let i = 0; i < array.length; i++) {
+
+function checkNumberOfBomerangs(bomerangArray) {
+    let total = 0;
+
+    for (let i = 0; i < bomerangArray.length; i++) {
     
-        if ( array[i] === array[i - 2] && array[i] !== array[i-1]) {
+        if ( bomerangArray[i] === bomerangArray[i - 2] && bomerangArray[i] != bomerangArray[i-1]) {
             total++;
         }
     }
@@ -17,4 +14,9 @@ function checkNumberOfBomerangs() {
     
 }
 
-console.log(checkNumberOfBomerangs());
+
+console.log(checkNumberOfBomerangs([9, 5, 9, 5, 1, 1, 1]) + " : 2");
+console.log(checkNumberOfBomerangs([5, 6, 6, 7, 6, 3, 9]) + " : 1");
+console.log(checkNumberOfBomerangs([4, 4, 4, 9, 9, 9, 9]) + " : 0");
+console.log(checkNumberOfBomerangs([1, 7, 1, 7, 1, 7, 1]) + " : 5");
+console.log(checkNumberOfBomerangs([3, 7, 3, 2, 1, 5, 1, 2, 2, -2, 2]) + " : 3");
