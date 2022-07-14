@@ -15,7 +15,7 @@ const correctTitle = (sentence) => {
     arraySentence.forEach((word, i) => {
         let lowerCase = word.toLowerCase();
 
-        if (lowerCase == "and" || lowerCase == "the" || lowerCase == "in") {
+        if (lowerCase == "and" || lowerCase == "the" || lowerCase == "in" || lowerCase == "of") {
             newArray.push(lowerCase);
         }else{
             newArray.push(lowerCase.charAt(0).toUpperCase() + lowerCase.slice(1))
