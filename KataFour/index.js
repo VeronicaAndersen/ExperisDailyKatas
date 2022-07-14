@@ -1,3 +1,4 @@
+// Check if a string is empty the return 0.
 
 export function testRegex(emptyString) {
     let regex = "^$";
